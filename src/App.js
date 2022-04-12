@@ -15,7 +15,7 @@ import { PhoneList } from "./PhoneList";
 import { Cart } from "./Cart";
 
 export const cartCtx = createContext();
-export const API = "http://localhost:9000";
+export const API = "https://shopping-cart18.herokuapp.com";
 
 export const currencyFormatter = (number) =>
   new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR" }).format(
