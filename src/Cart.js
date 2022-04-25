@@ -23,12 +23,6 @@ export function Cart({ setCart }) {
     setState({ ...state, open: false });
   };
 
-  useEffect(() => {
-    fetch(`${API}/cart`)
-      .then((data) => data.json())
-      .then((cartItems) => setCart(cartItems));
-  }, []);
-
   const CheckOut = () => {
     fetch(`${API}/checkout`, {
       method: "POST",
@@ -38,7 +32,7 @@ export function Cart({ setCart }) {
       .then((data) => data.json())
       .then((latestCart) => setCart(latestCart))
       .then(() => handleClick({
-        vertical: "top",
+        vertical: "buttom",
         horizontal: "right",
       })
       )

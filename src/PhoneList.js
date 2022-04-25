@@ -10,6 +10,7 @@ export function PhoneList() {
       .then((data) => data.json())
       .then((mbs) => setMobiles(mbs));
   }, []);
+
   return (
     <div className="phone-list-container">
       {mobiles.map((mobile) => (
@@ -18,6 +19,7 @@ export function PhoneList() {
     </div>
   );
 }
+
 function Phone({ mobile }) {
   const [cart, updateCart] = useContext(cartCtx);
   return (

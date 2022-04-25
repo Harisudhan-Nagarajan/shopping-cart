@@ -1,14 +1,6 @@
-import {
-  AppBar,
-  Badge,
-  Box,
-  Button,
-  IconButton,
-  Toolbar,
-} from "@mui/material";
+import { AppBar, Badge, Box, Button, IconButton, Toolbar } from "@mui/material";
 import { createContext, useEffect, useState } from "react";
 import "./App.css";
-// import { API } from "./global";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { PhoneList } from "./PhoneList";
@@ -65,7 +57,6 @@ export default function App() {
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>
-            
             </Toolbar>
           </AppBar>
         </Box>
@@ -74,11 +65,7 @@ export default function App() {
           <Route path="/" element={<PhoneList />} />
           <Route path="/cart" element={<Cart setCart={setCart} />} />
         </Routes>
-        {/* <PhoneList />
-        <Cart /> */}
       </cartCtx.Provider>
     </div>
   );
 }
-
-
